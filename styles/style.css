@@ -172,6 +172,11 @@ body {
   text-decoration: line-through;
 }
 
+.attribution {
+    text-align: center;
+    background-color: inherit;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 70vw;
