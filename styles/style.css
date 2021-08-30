@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-size: 18px;
+  font-family: 'Josefin', sans-serif;
+}
+
+.top {
+  background-image: url("/images/header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  z-index: -1;
+  height: 35vh;
+  position: relative;
+}
+
+.top::after {
+  content: '';
+  position: absolute;
+  background-color: #5e109d;
+  z-index: -2;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  width: 40vw;
+  height: 70vh;
+  z-index: 1;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+}
+
+.container h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+
+.container h1 span#theme {
+  background-repeat: no-repeat;
+  float: right;
+  height: 75%;
+}
+
+.container h1 span#theme svg {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.container p.lead {
+  color: #fff;
+  margin-top: 30px;
+}
+
+.container input {
+  height: 6vh;
+  font-size: 1.8rem;
+  color: lightgray;
+  width: 100%;
+  margin: 30px 0;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4d5066;
+}
+
+.container input:focus {
+  outline: none;
+}
+
+.container div#content-container {
+  background-color: #4d5066;
+  color: lightgray;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 10px 16px #333;
+          box-shadow: 5px 10px 16px #333;
+}
+
+.container div#button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 5px 10px 16px #333;
+          box-shadow: 5px 10px 16px #333;
+  color: inherit;
+}
+
+.container div#button-container p {
+  font-size: 14px;
+}
+
+.container div#button-container p span {
+  padding-right: 2px;
+}
+
+.container div#button-container button {
+  font-size: 14px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  color: inherit;
+  padding: 0 2px;
+}
+
+.container div#button-container button:hover {
+  color: #5e109d;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.bottom {
+  background-color: #393a4c;
+  z-index: -1;
+  height: 65vh;
+}
+
+.todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6vh;
+  font-size: 1.8rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: inherit;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding-left: 10px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.todo svg.remove {
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 70vw;
+    left: 15%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 80vw;
+    left: 10%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 95vw;
+    left: 2.5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

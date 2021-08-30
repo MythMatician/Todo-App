@@ -1,0 +1,175 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    position: relative;
+    font-size: 18px;
+    font-family: 'Josefin', sans-serif;
+}
+
+.top {
+    background-image: url('/images/header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: -1;
+    height: 35vh;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $overlay;
+        z-index:-2;
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.container {
+    width: 40vw;
+    height: 70vh;
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    h1 {
+        font-size: 3em;
+        font-weight: 700;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        span#theme {
+            background-repeat: no-repeat;
+            float: right;
+            height: 75%;
+            svg {
+                margin-bottom: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    p.lead {
+        color: $white;
+        margin-top: 30px;
+    }
+    input {
+        height: 6vh;
+        font-size: 1.8rem;
+        color: $lightgray;
+        width: 100%;
+        margin: 30px 0;
+        padding-left: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $todo-dark;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    div#content-container {
+        background-color: $todo-dark;
+        color: $lightgray;
+        border-radius: 5px;
+        box-shadow: 5px 10px 16px #333;
+    }
+    div#button-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 6vh;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 5px 10px 16px #333;
+        color: inherit;
+        p {
+            font-size: 14px;
+            span {
+                padding-right: 2px;
+            }
+        }
+        button {
+            font-size: 14px;
+            background-color: transparent;
+            border: transparent;
+            cursor: pointer;
+            color: inherit;
+            padding: 0 2px;
+            &:hover {
+                color: $overlay;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.bottom {
+    background-color: $dark-background;
+    z-index: -1;
+    height: 65vh;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    font-size: 1.8rem;
+    align-self: center;
+    color: inherit;
+    width: 100%;
+    border-bottom: 1px solid $lightgray;
+    padding-left: 10px;
+    background-color: inherit;
+    cursor: pointer;
+    svg.remove{
+        cursor: pointer;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    } 
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 70vw;
+        left: 15%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 80vw;
+        left: 10%;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: 95vw;
+        left: 2.5%;
+    }
+}
+
+
+
+
+
+
+
+
